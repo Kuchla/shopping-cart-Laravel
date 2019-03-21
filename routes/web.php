@@ -16,7 +16,7 @@ Route::get('/cart/add/{id}', ['uses' => 'CartController@getAddToCart', 'as' => '
 Route::get('/cart', ['uses' => 'CartController@getCart', 'as' => 'cart.index']);
 Route::get('/cart/decrement/{id}', ['uses' => 'CartController@getDecrement', 'as' => 'cart.decrement']);
 Route::get('/cart/increment/{id}', ['uses' => 'CartController@getIncrement', 'as' => 'cart.increment']);
-
+Route::get('/cart/checkout', ['uses' => 'CartController@getCheckout', 'as' => 'cart.checkout']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

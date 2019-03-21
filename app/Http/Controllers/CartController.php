@@ -57,4 +57,10 @@ class CartController extends Controller
         Session::put('cart', $cart);
         return redirect()->route('cart.index');
     }
+
+    public function getCheckout()
+    {
+        Session::forget('cart');
+        return redirect()->route('product.index')->with('success', 'Successfully purchased products!');
+    }
 }

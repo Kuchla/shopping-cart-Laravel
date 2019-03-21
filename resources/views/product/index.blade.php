@@ -5,6 +5,12 @@
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
+		  @if(Session::has('success'))
+      	<div class="alert alert-info alert-block">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ Session::get('success') }}
+        </div>
+      @endif
 			<div class="card">
 				<div class="card-header">PRODUCTS</div>
 				<div class="album py-5 bg-light">

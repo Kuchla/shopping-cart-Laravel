@@ -44,7 +44,7 @@
               <hr>
               <strong>Total:</strong> U$$ {{ $total }}
               <p>
-                <a href="#" class="btn btn-primary" role="button"
+                <a href="{{ route('cart.checkout') }}" class="btn btn-primary" role="button"
                   aria-disabled="false">Checkout</a>
                 <a href="{{ route('product.index') }}" class="btn btn btn-secondary" role="button"
                   aria-disabled="false">Continue Shopping</a>
