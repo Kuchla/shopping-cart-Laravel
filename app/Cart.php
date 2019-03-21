@@ -6,6 +6,7 @@ class Cart
 {
     public $products = null;
     public $total = 0;
+    public $quantity = 0;
 
     public function __construct($oldCart)
     {
@@ -13,6 +14,7 @@ class Cart
         if ($oldCart) {
             $this->products = $oldCart->products;
             $this->totalPrice = $oldCart->total;
+            $this->quantity = $oldCart->quantity;
         }
     }
     public function add($new_product)
@@ -33,7 +35,8 @@ class Cart
 
         // array products[id], receives data of the updated or created product
         $this->products[$new_product->id] = $storedProduct;
-        // Increment total of all products
+        // Increment total and quantity of all products
+        $this->quantity++;
         $this->total += $new_product->price;
     }
 }

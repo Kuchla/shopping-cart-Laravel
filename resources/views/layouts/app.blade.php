@@ -38,6 +38,13 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="badge">
+                                    {{ Session::has('cart') ? Session::get('cart')->quantity: '' }}
+                                </span>
+                            </a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

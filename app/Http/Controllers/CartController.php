@@ -20,6 +20,6 @@ class CartController extends Controller
         // Update cart session
         $request->session()->put('cart', $cart);
 
-        dd($request->session()->get('cart'));
+        return redirect()->route('product.index');
     }
 }
