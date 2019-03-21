@@ -39,4 +39,26 @@ class Cart
         $this->quantity++;
         $this->total += $new_product->price;
     }
+
+    public function decrement($id)
+    {
+        // Decrement product with $id
+        $this->products[$id]['quantity']--;
+        $this->products[$id]['price'] -= $this->products[$id]['product']['price'];
+        $this->quantity--;
+        $this->total -= $this->products[$id]['product']['price'];
+        // If quantity of product with $id is 0, destroy array products with $id
+        if ($this->products[$id]['quantity'] <= 0) {
+            unset($this->products[$id]);
+        }
+    }
+
+    public function increment($id)
+    {   
+        // Increment products
+        $this->products[$id]['quantity']++;
+        $this->products[$id]['price'] += $this->products[$id]['product']['price'];
+        $this->quantity++;
+        $this->total += $this->products[$id]['product']['price'];
+    }
 }

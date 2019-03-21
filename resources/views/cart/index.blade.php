@@ -28,7 +28,9 @@
                         {{ $product['product']['name'] }}
                       </td>
                       <td>
-                        {{ $product['quantity'] }}
+                          <a href="{{ route('cart.decrement', ['id' => $product['product']['id']]) }}"> - </a> 
+                            {{ $product['quantity'] }}
+                          <a href="{{ route('cart.increment', ['id' => $product['product']['id']]) }}"> + </a>
                       </td>
                       <td>
                         U$$ {{ $product['price'] }}
