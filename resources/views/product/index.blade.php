@@ -26,7 +26,7 @@
 											<strong>U$$ {{ $product->price }}</strong>
 										</p>
 										<p>
-											<a href="#" class="btn btn-primary" role="button" aria-disabled="false">Add to cart</a>
+											<a href={{ route('cart.add', ['id' => $product->id]) }} class="btn btn-primary" role="button" aria-disabled="false">Add to cart</a>
 										</p>
 									</div>
 								</div>
