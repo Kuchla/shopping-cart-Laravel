@@ -20,6 +20,14 @@ class CartController extends Controller
         // Update cart session
         $request->session()->put('cart', $cart);
 
-        return redirect()->route('product.index');
+        return redirect()->route('cart.index');
+    }
+    
+    public function getCart()
+    {
+        // get session cart and recreate cart object
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('cart.index', ['products' => $cart->products, 'total' => $cart->total]);
     }
 }

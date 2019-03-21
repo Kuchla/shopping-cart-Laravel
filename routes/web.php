@@ -13,6 +13,7 @@
 
 Route::get('/', ['uses' => 'ProductController@getProducts', 'as' => 'product.index']);
 Route::get('/cart/add/{id}', ['uses' => 'CartController@getAddToCart', 'as' => 'cart.add']);
+Route::get('/cart', ['uses' => 'CartController@getCart', 'as' => 'cart.index']);
 
 Auth::routes();
 

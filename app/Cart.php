@@ -13,7 +13,7 @@ class Cart
         // if exists old cart, the new receives your data
         if ($oldCart) {
             $this->products = $oldCart->products;
-            $this->totalPrice = $oldCart->total;
+            $this->total = $oldCart->total;
             $this->quantity = $oldCart->quantity;
         }
     }
