@@ -24,7 +24,11 @@
                   <td>{{ $order->id }}</td>
                   <td> {{ $order->total }}</td>
                   <td> {{ $order->created_at }}</td>
-                  <td><a href="{{ route('order.show', ['id' => $order->id]) }}"> Show </i></a></td>
+                  <td>
+                    <a href="{{ route('order.show', ['id' => $order->id]) }}">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                  </td>
                 </tr>
                 @empty
                 <p>Without products!</p>
