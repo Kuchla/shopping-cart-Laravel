@@ -19,3 +19,4 @@ Route::get('/cart/increment/{id}', ['uses' => 'CartController@getIncrement', 'as
 
 Auth::routes();
 Route::get('/cart/checkout', ['uses' => 'CartController@getCheckout', 'as' => 'cart.checkout'])->middleware('auth');
+Route::get('/orders/', ['uses' => 'OrderController@getOrders', 'as' => 'order.index'])->middleware('auth');
