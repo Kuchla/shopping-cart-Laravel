@@ -1,0 +1,7 @@
+{
+  "emmet.includeLanguages": {
+    "blade": "html"
+  },
+  "blade.format.enable": true,
+  "emmet.triggerExpansionOnTab": true
+}

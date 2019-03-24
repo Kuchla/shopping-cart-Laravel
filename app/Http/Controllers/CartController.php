@@ -46,7 +46,6 @@ class CartController extends Controller
     } else {
       Session::forget('cart');
     }
-    Session::put('cart', $cart);
     return redirect()->route('cart.index');
   }
 
